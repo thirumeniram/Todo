@@ -1,3 +1,25 @@
+# TODO App
+
+A simple yet powerful offline-capable TODO application built with React JS, designed for easy task management.
+
+## Key Features
+
+- **Task Addition:** Quickly add tasks using the input bar by pressing the return key.
+- **Task List:** View your tasks as cards, appended to the list as they are created.
+- **Task Completion:** Click on a task card to mark it as complete and automatically move it to the bottom of the list.
+- **Ordering:** Active tasks are shown in the order they were created, while completed tasks are sorted by completion time.
+- **Reset Functionality:** A reset button is available to clear all tasks and reset the app to its initial state.
+- **Persistence:** The app state persists through browser refreshes, mimicking the behavior of a native offline app.
+
+## Expectations
+
+- **UI/UX Design:** The app provides an intuitive and pleasant user interface and experience.
+- **Reliability:** Core functionalities work as expected without surprises.
+- **Extras:** Additional features or utilities are welcome and included where possible.
+- **Compatibility:** The app is compatible with the latest versions of Google Chrome and Firefox.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

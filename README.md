@@ -21,9 +21,9 @@ A simple yet powerful offline-capable TODO application built with React JS, desi
 - **Persistence**- The app is designed to maintain its state even through browser refreshes, emulating the reliability of a native offline application.
 
 
-<h3>Task Editing</h3>
+<h3>Task Editing(Additional Feature)</h3>
 <p style="font-size: large;">
-  Task content can be conveniently edited. By selecting a specific task, users are provided the option to revise the task's details.
+  .  Task content can be conveniently edited. By selecting a specific task, users are provided the option to revise the task's details.
 </p>
 ---
 

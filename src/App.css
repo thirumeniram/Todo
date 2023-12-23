@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #282c34;
+  background-color: #071229;
 }
 
 .container {
@@ -41,15 +41,125 @@ button {
   margin: 0;
   padding: 0;
 }
+
+.todoText {
+  
+  flex: 1;
+}
+.resetButton {
+  position: absolute;
+  top: 10px; /* Adjust as needed */
+  right: 10px; /* Adjust as needed */
+  padding: 10px;
+  background-color: #f44336; /* Red color for reset */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  background-color: #d32f2f;
+}
+/* ... other styles ... */
+
 .singleTodo {
   border-radius: 50px;
   margin: 10px 0;
-  background-color: #5dadf8;
+  background-color:white;
   padding: 10px 20px;
   display: flex;
-  width: 450px;
+  justify-content: space-between; /* Adjust the children spacing */
   align-items: center;
+  width: 350px; /* You can adjust the width as needed */
 }
+
 .todoText {
-  flex: 1;
+
+  flex: 0 0 70%; /* Allocate 70% width */
+  margin-right: auto; /* This will push all other items to the right */
 }
+
+.editButton, .checkboxContainer {
+  flex: 0 0 15%; /* Allocate 15% width to both edit button and checkbox */
+  text-align: center; /* Center the button text and checkbox */
+}
+
+.checkboxContainer {
+  width:20px
+}
+
+/* Adjust your button and input[type="checkbox"] styles if needed */
+
+
+
+/* ... existing styles ... */
+
+.todoForm {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; /* Add this to vertically align form items */
+  width: 450px; /* Ensure this matches the width of your todo items */
+  margin-bottom: 20px; /* Add some space between form and list */
+}
+
+/* Match the width of input to that of .singleTodo */
+input[type="text"] {
+  width: calc(70% - 40px); /* Subtract padding */
+  padding: 10px;
+  margin-right: 10px; /* Add space between the input and the button */
+  border-radius: 20px;
+  border: none;
+}
+
+/* Style the 'Go' button to match the size of edit button in todo items */
+.todoForm button {
+  flex: 0 0 15%;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 0 5px;
+  width: calc(15% - 10px); /* Adjust width to match the edit button */
+}
+
+/* ... other styles ... */
+
+.singleTodo {
+  color:black;
+  border-radius: 20px; /* Match the border-radius of your input */
+  background-color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 400px; /* Match the width with .todoForm */
+  margin: 10px 0;
+  height:25px;
+}
+
+.todoText {
+  /* Adjust text alignment and overflow handling */
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 10px; /* Add some space between the text and the button */
+}
+
+.editButton, .checkboxContainer {
+  flex: 0 0 15%;
+  text-align: center;
+  padding: 5px 0; /* Add padding for vertical alignment */
+}
+
+
+.completed .checkboxContainer {
+  display: none;
+  
+}
+.singleTodo.completed {
+  background-color: #089f0b; 
+ 
+  color: white; 
+}
+
+
+

@@ -32,7 +32,7 @@ const TodoForm = ({ handleSubmit, todo, editId, setTodo }) => {
         id="todoInput" // It's also a good practice to add an id that matches the name
         autoComplete="off" // This prevents the browser from trying to autocomplete the field
       />
-      <button type="submit"> {editId ? "Edit" : "Go"}</button>
+      <button type="submit"> {editId ? "Edit" : "Add"}</button>
     </form>
   );
 };

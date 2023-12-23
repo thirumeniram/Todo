@@ -9,7 +9,7 @@ const App = () => {
   const [completedTodos, setCompletedTodos] = useState([]);
   const [editId, setEditId] = useState(0);
 
-  // Load todos from localStorage on initial render
+  // Loading todos from localStorage on initial render
   useEffect(() => {
     const storedTodos = JSON.parse(localStorage.getItem("Todos"));
     if (storedTodos) {
@@ -19,24 +19,26 @@ const App = () => {
     }
   }, []);
 
-  // Save todos to localStorage whenever they change
+  // Saving todos to localStorage whenever they change
   useEffect(() => {
     // Combine active and completed todos before saving
     const allTodos = [...activeTodos, ...completedTodos];
     localStorage.setItem("Todos", JSON.stringify(allTodos));
   }, [activeTodos, completedTodos]);
+  
 
+  //adding the task to the active todos
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (editId) {
-      // Attempt to edit in activeTodos
+      // Attempting to edit in activeTodos
       let updatedActiveTodos = activeTodos.map((t) =>
         t.id === editId ? { id: t.id, todo, isComplete: false } : t
       );
       setActiveTodos(updatedActiveTodos);
 
-      // Attempt to edit in completedTodos
+      // Attempting to edit in completedTodos
       let updatedCompletedTodos = completedTodos.map((t) =>
         t.id === editId ? { id: t.id, todo, isComplete: true } : t
       );
@@ -53,40 +55,38 @@ const App = () => {
       setTodo("");
     }
   };
-
+  
+  //Edit function to edit the task
   const handleEdit = (id) => {
+    //updating the task in active todo
     const editTodo = [...activeTodos, ...completedTodos].find((t) => t.id === id);
     setTodo(editTodo.todo);
     setEditId(id);
   };
 
-  // const handleComplete = (id) => {
-  //   const completedTodo = activeTodos.find((t) => t.id === id);
-  //   if (completedTodo) {
-  //     setActiveTodos(activeTodos.filter((t) => t.id !== id));
-  //     setCompletedTodos([completedTodo, ...completedTodos]);
-  //   }
-  // };
+  //fucntion to handle the completion
   const handleComplete = (id) => {
+    //removing the task in activetodo
     const updatedActiveTodos = activeTodos.filter((t) => t.id !== id);
     const completedTodo = activeTodos.find((t) => t.id === id);
   
     if (completedTodo) {
-      // Set isComplete to true when moving the todo to the completed list
+      
       const updatedTodo = { ...completedTodo, isComplete: true };
       setActiveTodos(updatedActiveTodos);
+      //updating the task in completedtodo
       setCompletedTodos([updatedTodo, ...completedTodos]);
     }
   };
   
-
+//function to reset all the tasks
   const handleReset = () => {
     setActiveTodos([]);
     setCompletedTodos([]);
     localStorage.removeItem("Todos");
   };
 
-  // ... imports and other component logic ...
+  
 
 return (
   <div className="App">
@@ -109,7 +109,6 @@ return (
   </div>
 );
 
-// ... rest of the App component ...
 
 };
 

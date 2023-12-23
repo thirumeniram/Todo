@@ -2,21 +2,38 @@
 
 A simple yet powerful offline-capable TODO application built with React JS, designed for easy task management.
 
+![todo image](https://github.com/thirumeniram/Todo/assets/66516937/f2236427-297b-4320-9a09-e779cacaa5c0)
+
+
+# TODO App Features
+
 ## Key Features
 
-- **Task Addition:** Quickly add tasks using the input bar by pressing the return key.
-- **Task List:** View your tasks as cards, appended to the list as they are created.
-- **Task Completion:** Click on a task card to mark it as complete and automatically move it to the bottom of the list.
-- **Ordering:** Active tasks are shown in the order they were created, while completed tasks are sorted by completion time.
-- **Reset Functionality:** A reset button is available to clear all tasks and reset the app to its initial state.
-- **Persistence:** The app state persists through browser refreshes, mimicking the behavior of a native offline app.
+- **Task Addition:**- Tasks can be effortlessly added using the input bar by simply pressing the return key.
 
-## Expectations
 
-- **UI/UX Design:** The app provides an intuitive and pleasant user interface and experience.
-- **Reliability:** Core functionalities work as expected without surprises.
-- **Extras:** Additional features or utilities are welcome and included where possible.
-- **Compatibility:** The app is compatible with the latest versions of Google Chrome and Firefox.
+
+- **Task List** - A dynamic list of tasks is maintained, where tasks appear as cards. These are appended to the list as soon as they are created.
+
+- **Task Completion**- Upon clicking a task card, the task is marked as complete. Completed tasks are then automatically relocated to the bottom of the list.
+
+- **Ordering**- Active tasks are consistently displayed in the sequence of their creation. Conversely, completed tasks are organized based on their completion time.
+
+- **Reset Functionality**- For convenience, a reset button is included. This button facilitates the clearing of all tasks, effectively resetting the app to its initial, pristine state.
+
+- **Persistence**- The app is designed to maintain its state even through browser refreshes, emulating the reliability of a native offline application.
+
+
+<h3>Task Editing(Additional Feature)</h3>
+<li style="font-size: large;">
+   Task content can be conveniently edited. By selecting a specific task, users are provided the option to revise the task's details.
+</li>
+
+
+
+---
+
+
 
 
 

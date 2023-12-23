@@ -2,7 +2,7 @@
 
 A simple yet powerful offline-capable TODO application built with React JS, designed for easy task management.
 
-![todo image](https://github.com/thirumeniram/Todo/assets/66516937/d190c138-0cf1-4d94-84cf-0d3bbe2cf380)
+![todo image](https://github.com/thirumeniram/Todo/assets/66516937/f2236427-297b-4320-9a09-e779cacaa5c0)
 
 
 # TODO App Features

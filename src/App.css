@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #071229;
+  background-color: rgb(240, 238, 244);
 }
 
 .container {
@@ -14,7 +14,8 @@
   flex-direction: column;
   align-items: center;
   font-size: 20px;
-  color: white;
+  background-color: white;
+  color: #091e4d;
 }
 
 .todoForm {
@@ -48,10 +49,10 @@ button {
 }
 .resetButton {
   position: absolute;
-  top: 10px; /* Adjust as needed */
-  right: 10px; /* Adjust as needed */
+  top: 40px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
   padding: 10px;
-  background-color: #f44336; /* Red color for reset */
+  background-color: #091e4d; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -73,6 +74,11 @@ button {
   align-items: center;
   width: 350px; /* You can adjust the width as needed */
 }
+
+.singleTodo button{
+  background-color: white;
+}
+
 
 .todoText {
 
@@ -110,6 +116,8 @@ input[type="text"] {
   margin-right: 10px; /* Add space between the input and the button */
   border-radius: 20px;
   border: none;
+  background-color:  #091e4d;
+  color:white;
 }
 
 /* Style the 'Go' button to match the size of edit button in todo items */
@@ -119,35 +127,37 @@ input[type="text"] {
   border-radius: 20px;
   margin: 0 5px;
   width: calc(15% - 10px); /* Adjust width to match the edit button */
+  background-color: #091e4d;
+  color:whitesmoke;
 }
 
 /* ... other styles ... */
 
 .singleTodo {
-  color:black;
+  color:white;
   border-radius: 20px; /* Match the border-radius of your input */
-  background-color: white;
+  background-color:  #091e4d;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 400px; /* Match the width with .todoForm */
   margin: 10px 0;
-  height:25px;
+  height:30px;
 }
 
 .todoText {
-  /* Adjust text alignment and overflow handling */
+ 
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  margin-right: 10px; /* Add some space between the text and the button */
+  margin-right: 10px; 
 }
 
 .editButton, .checkboxContainer {
   flex: 0 0 15%;
   text-align: center;
-  padding: 5px 0; /* Add padding for vertical alignment */
+  padding: 5px 0; 
 }
 
 
@@ -156,7 +166,7 @@ input[type="text"] {
   
 }
 .singleTodo.completed {
-  background-color: #089f0b; 
+  background-color: #49a129; 
  
   color: white; 
 }

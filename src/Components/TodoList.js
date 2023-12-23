@@ -1,41 +1,7 @@
 
-// import React from "react";
-
-// const TodoList = ({ activeTodos, completedTodos, handleComplete, handleEdit }) => {
-//   return (
-//     <>
-//       <ul className="allTodos">
-//         {activeTodos.map((todo) => (
-//           <li className="singleTodo" key={todo.id}>
-//             <span className="todoText">{todo.todo}</span>
-//             <div className="editButton">
-//               <button onClick={() => handleEdit(todo.id)}>Edit</button>
-//             </div>
-//             <div className="checkboxContainer">
-//               <input
-//                 type="checkbox"
-//                 onChange={() => handleComplete(todo.id)}
-//               />
-//             </div>
-//           </li>
-//         ))}
-//       </ul>
-//       <ul className="allTodos">
-//         {completedTodos.map((todo) => (
-//           <li className="singleTodo" key={todo.id}>
-//             <span className="todoText">{todo.todo}</span>
-//             {/* Checkbox removed for completed todos */}
-            
-//           </li>
-//         ))}
-//       </ul>
-//     </>
-//   );
-// };
-
-// export default TodoList;
-
-// ... imports ...
+ import React from "react";
+ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+ import { faCheck,faPenToSquare} from '@fortawesome/free-solid-svg-icons'
 
 const TodoList = ({ activeTodos, completedTodos, handleComplete, handleEdit }) => {
     return (
@@ -46,14 +12,15 @@ const TodoList = ({ activeTodos, completedTodos, handleComplete, handleEdit }) =
             <li className="singleTodo" key={todo.id}>
               <span className="todoText">{todo.todo}</span>
               <div className="editButton">
-                <button onClick={() => handleEdit(todo.id)}>Edit</button>
+                <FontAwesomeIcon icon={faPenToSquare} onClick={() => handleEdit(todo.id)}/>
+                {/* <button onClick={() => handleEdit(todo.id)}>Edit</button> */}
               </div>
-              <div className="checkboxContainer">
-                <input
-                  type="checkbox"
-                  onChange={() => handleComplete(todo.id)}
-                />
+              <div className="editButton">
+              
+              <FontAwesomeIcon icon={faCheck} onClick={() => handleComplete(todo.id)}/>
+                {/* <button onClick={() => handleComplete(todo.id)}>Completed</button> */}
               </div>
+              
             </li>
           ))}
         </ul>
@@ -62,8 +29,6 @@ const TodoList = ({ activeTodos, completedTodos, handleComplete, handleEdit }) =
           {completedTodos.map((todo) => (
             <li className="singleTodo completed" key={todo.id}>
               <span className="todoText">{todo.todo}</span>
-              
-              {/* Checkbox removed for completed todos */}
             </li>
           ))}
         </ul>

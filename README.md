@@ -23,8 +23,11 @@ A simple yet powerful offline-capable TODO application built with React JS, desi
 
 <h3>Task Editing(Additional Feature)</h3>
 <li style="font-size: large;">
-  .  Task content can be conveniently edited. By selecting a specific task, users are provided the option to revise the task's details.
+   Task content can be conveniently edited. By selecting a specific task, users are provided the option to revise the task's details.
 </li>
+
+
+
 ---
 
 
